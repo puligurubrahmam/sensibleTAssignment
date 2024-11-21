@@ -20,7 +20,7 @@ const CreateUser = (props) =>
                     name,aadhar
                 })
             }
-            const response = await fetch('http://localhost:5000',option);
+            const response = await fetch('https://sensibletassignment-backend.onrender.com',option);
             if(response.ok)
             {
                 const data = await response.json();
