@@ -8,7 +8,7 @@ const AllTransactions = ()=>
     {
       const fetchFucntion= async()=>
       {
-        const response = await fetch('http://localhost:5000/alltransactions');
+        const response = await fetch('https://sensibletassignment-backend.onrender.com/alltransactions');
         if(response.ok)
         {
             const AllTransactions =await response.json();
