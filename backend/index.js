@@ -29,7 +29,7 @@ const InitializeServerAndDatabase = async ()=>
     try
     {
         db = await open({
-            filename:dBpath,
+            filename:dbPathDeploy,
             driver:sqlite3.Database,
         })
         
