@@ -1,0 +1,40 @@
+.transaction-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+.input-items{
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    outline: none;
+    width: 100%;
+}
+.form-container >* {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.add-transaction{
+    background-color: lightgray;
+    color: #000;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    margin: auto;
+}
+.error{
+    color: red;
+    font-size: 12px;
+    text-align: center;
+}
+.success{
+    color: green;
+    font-size: 12px;
+    text-align: center;
+}
