@@ -26,7 +26,7 @@ const UserTransactions =(props)=>
         const fetchTransactions = async () =>
         {
             setActiveStatus(apiStatus.loading)
-            const response = await fetch(`http://localhost:5000/user/${id}`);
+            const response = await fetch(`https://sensibletassignment-backend.onrender.com/user/${id}`);
             if(response.ok)
             {
                 const data = await response.json()
