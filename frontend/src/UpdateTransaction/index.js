@@ -15,7 +15,7 @@ const UpdateTransaction =(props)=>
     {
         const fetchFunction=async()=>
         {
-            const response = await fetch(`http://localhost:5000/user/${userId}/transaction/${id}`);
+            const response = await fetch(`https://sensibletassignment-backend.onrender.com/user/${userId}/transaction/${id}`);
             if(response.ok)
             {
                 const data = await response.json();
@@ -41,7 +41,7 @@ const UpdateTransaction =(props)=>
                 })
             }
             console.log(option.body)
-            const response = await fetch(`http://localhost:5000/user/${userId}/transaction/${id}`,option)
+            const response = await fetch(`https://sensibletassignment-backend.onrender.com/user/${userId}/transaction/${id}`,option)
             if(response.ok)
             {
                 
