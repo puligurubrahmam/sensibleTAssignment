@@ -8,7 +8,6 @@ const dBpath = path.join(__dirname,'usersTransactions.db');
 const app = express();
 app.use(express.json());
 app.use(cors());
-
 let db = null;
 const dbPathDeploy = process.env.DB_PATH || path.join('/tmp', 'usersTransactions.db');
 const PORT = process.env.PORT || 5000;
