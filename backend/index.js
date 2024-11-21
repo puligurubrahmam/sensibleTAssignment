@@ -3,32 +3,18 @@ const {open} = require('sqlite');
 const sqlite3 = require('sqlite3')
 const path = require('path');
 const cors = require('cors');
-const fs = require('fs');
 const dBpath = path.join(__dirname,'usersTransactions.db');
 const app = express();
 app.use(express.json());
 app.use(cors());
 let db = null;
-const dbPathDeploy = process.env.DB_PATH || path.join('/tmp', 'usersTransactions.db');
 const PORT = process.env.PORT || 5000;
-const destinationDir = path.dirname(dbPathDeploy);
-if (!fs.existsSync(destinationDir)) {
-  fs.mkdirSync(destinationDir, { recursive: true });
-}
-
-// Copy the database file if it doesn't already exist at the destination
-if (!fs.existsSync(dbPathDeploy)) {
-  fs.copyFileSync(dBpath, dbPathDeploy);
-  console.log(`Database copied to ${dbPathDeploy}`);
-} else {
-  console.log(`Database already exists at ${dbPathDeploy}`);
-}
 const InitializeServerAndDatabase = async ()=>
 {
     try
     {
         db = await open({
-            filename:dbPathDeploy,
+            filename:dBpath,
             driver:sqlite3.Database,
         })
         
