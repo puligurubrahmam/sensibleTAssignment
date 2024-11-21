@@ -1,7 +1,7 @@
 {
   "engines": {
     "node": "18.x"
-   },
+  },
   "name": "backend",
   "version": "1.0.0",
   "main": "index.js",
@@ -9,6 +9,7 @@
     "start": "node index.js",
     "dev": "node index.js",
     "build": "npm rebuild",
+    "postinstall": "npm install sqlite3 --build-from-source=false",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
